@@ -1,11 +1,6 @@
 from mididings import *
 from mididings.extra import *
 
-# TODO
-# - Switchable Mother-32 clock behavior: 1) 24ppqn DIN sync, 2) mididings scenes, with and w/o clock to m-32
-# - LinuxSampler (rpi3)
-# - Connect to iOS (another MIDI/USB interface maybe?)
-
 config(
     backend='alsa',
 
