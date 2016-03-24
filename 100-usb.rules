@@ -1,0 +1,2 @@
+SUBSYSTEM=="usb", DRIVER=="usb", ACTION=="add", RUN+="/etc/init.d/mididings restart"
+
