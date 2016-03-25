@@ -22,13 +22,15 @@ PIDFILE=/var/run/$DAEMON_NAME.pid
 do_start () {
     log_daemon_msg "Starting system $DAEMON_NAME daemon"
     echo "Starting..." >> $DAEMON_LOGFILE
-    start-stop-daemon --start --background --pidfile $PIDFILE --make-pidfile --user $DAEMON_USER --chuid $DAEMON_USER --startas /bin/bash -- -c "exec $DAEMON $DAEMON_OPTS >> $DAEMON_LOGFILE 2>&1"
+    $DAEMON $DAEMON_OPTS >> $DAEMON_LOGFILE 2>&1 &
+    while ! echo exit | /usr/bin/netcat localhost 8888; do sleep 2; done
+    netcat localhost 8888 < /etc/linuxampler.lscp
     log_end_msg $?
 }
 do_stop () {
     log_daemon_msg "Stopping system $DAEMON_NAME daemon"
     echo "Stopping..." >> $DAEMON_LOGFILE
-    start-stop-daemon --stop --pidfile $PIDFILE --retry 10
+    start-stop-daemon --stop --exec $DAEMON --retry 10
     log_end_msg $?
 }
 
