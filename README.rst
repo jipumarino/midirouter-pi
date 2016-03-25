@@ -7,6 +7,7 @@ TODO
 - LinuxSampler setup:
 
   - Download and unpack ``http://freepats.zenvoid.org/Piano/SalamanderGrandPianoV3_44.1khz16bit.tar.bz2``
+  - Use program changes instead of MIDI channels
 
 - Realtime setup:
 
