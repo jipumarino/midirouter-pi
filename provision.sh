@@ -9,8 +9,8 @@ sudo apt-get install vim linuxsampler mididings
 sudo cp midirouter-pi/etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
 sudo cp midirouter-pi/etc/init.d/linuxsampler /etc/init.d/linuxsampler
 sudo cp midirouter-pi/etc/init.d/mididings /etc/init.d/mididings
-sudo cp midirouter-pi/etc/linuxsampler.lscp /etc/linuxsampler.lscp
-sudo cp midirouter-pi/etc/mididings.py /etc/mididings.py
+sudo cp midirouter-pi/etc/linuxsampler.conf /etc/linuxsampler.conf
+sudo cp midirouter-pi/etc/mididings.conf /etc/mididings.conf
 sudo cp midirouter-pi/etc/security/limits.conf /etc/security/limits.conf
 sudo cp midirouter-pi/etc/udev/rules.d/100-usb.rules /etc/udev/rules.d/100-usb.rules
 sudo touch /var/log/mididings.log
