@@ -10,7 +10,7 @@
 # Description:       MIDI routing
 ### END INIT INFO
 
-DAEMON="/usr/bin/mididings -f /etc/mididings.py"
+DAEMON="/usr/bin/mididings -f /etc/mididings.conf"
 DAEMON_NAME=mididings
 
 # Add any command line options for your daemon here
