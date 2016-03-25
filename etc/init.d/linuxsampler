@@ -23,8 +23,7 @@ do_start () {
     log_daemon_msg "Starting system $DAEMON_NAME daemon"
     echo "Starting..." >> $DAEMON_LOGFILE
     $DAEMON $DAEMON_OPTS >> $DAEMON_LOGFILE 2>&1 &
-    while ! echo exit | /usr/bin/netcat localhost 8888; do sleep 2; done
-    netcat localhost 8888 < /etc/linuxampler.lscp
+    netcat localhost 8888 < /etc/linuxsampler.lscp
     log_end_msg $?
 }
 do_stop () {

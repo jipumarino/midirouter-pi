@@ -15,6 +15,7 @@ config(
         ('m32-in',   'CH345:0'),
         ('nord-in',  'Nord Lead A1:0'),
         ('volca-in', 'mio:0'),
+        ('linuxsampler-in', 'LinuxSampler:0'),
     ],
 )
 
@@ -32,6 +33,13 @@ run([
         ~ChannelFilter(10) >> [
             Port('m32-in'),
             Port('nord-in'),
+            Port('linuxsampler-in'),
+        ],
+
+    PortFilter('nord-out') >>
+        ~ChannelFilter(10) >> [
+            Port('m32-in'),
+            Port('linuxsampler-in'),
         ],
 
     # Remap BSP Channel 10 to Volca Sample channel-per-part scheme
