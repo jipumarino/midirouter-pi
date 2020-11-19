@@ -1,19 +1,6 @@
 Raspberry Pi as MIDI Router and Sample Player
 =============================================
 
-TODO
-----
-
-- LinuxSampler setup:
-
-  - Download and unpack ``http://freepats.zenvoid.org/Piano/SalamanderGrandPianoV3_44.1khz16bit.tar.bz2``
-  - Use program changes instead of MIDI channels
-
-- Realtime setup:
-
-  - Removing unused daemons: http://wiki.linuxaudio.org/wiki/raspberrypi
-
-- Mididings
-
-  - Toggle Mother-32 clock behavior
-  - iOS MIDI interface
+Branch just doing
+Launchkey Mini Mk3 >> MOTU M4 (filtering clock)
+MOTU M4 >> Launchkey Mini MK3
