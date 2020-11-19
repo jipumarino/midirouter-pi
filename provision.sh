@@ -9,7 +9,6 @@ sudo cp midirouter-pi/etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant
 sudo apt-get install vim mididings
 sudo cp midirouter-pi/etc/init.d/mididings /etc/init.d/mididings
 sudo cp midirouter-pi/etc/mididings.conf /etc/mididings.conf
-sudo cp midirouter-pi/etc/security/limits.conf /etc/security/limits.conf
 sudo cp midirouter-pi/etc/udev/rules.d/100-usb.rules /etc/udev/rules.d/100-usb.rules
 sudo touch /var/log/mididings.log
 sudo chown pi.pi /var/log/mididings.log
