@@ -1,8 +1,6 @@
 echo "### Expand filesystem and then reboot###"
 sudo raspi-config
 git clone https://github.com/jipumarino/midirouter-pi.git
-wget -q -O - http://rpi.autostatic.com/autostatic.gpg.key | sudo apt-key add -
-echo "deb http://rpi.autostatic.com/raspbian jessie main" | sudo tee /etc/apt/sources.list.d/autostatic-audio-raspbian.list
 sudo apt-get update
 sudo dpkg-reconfigure locales
 sudo apt-get install vim mididings
